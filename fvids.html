@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fvids</title>
+<link rel="stylesheet" href="fvids.css">
+</head>
+
+<body>
+<!-- TOP BAR -->
+<div id="top-bar">
+
+  <div id="title">FVIDS</div>
+  <button id="reload-page-btn">
+  Reload
+  </button>
+
+  <!-- SEARCH BUTTON -->
+  <button id="search-btn" onclick="location.href='fvidsearch.html'">
+    🔍
+  </button>
+
+</div>
+
+<!-- TAB SWITCH -->
+<div id="tabs">
+
+  <div class="tab active" onclick="switchTab('foryou')">
+    For You
+  </div>
+<div class="tab" data-tab="tutorials">
+  Tutorials
+</div>
+
+  <div class="tab" onclick="location.href='fvidsfollowing.html'">
+    Following
+  </div>
+
+</div>
+
+<!-- UPLOAD QUEUE FLOAT -->
+<div id="upload-queue"></div>
+
+<!-- VIDEO FEED -->
+<div id="video-feed">
+  <div id="video-loader">
+  <div class="spinner"></div>
+</div>
+
+  <h1 style="opacity:0.6; text-align:center; margin-top:20px;">
+    Loading videos...
+  </h1>
+</div>
+
+<!-- BOTTOM NAV -->
+<div id="bottom-nav">
+
+  <div class="nav-item active" onclick="location.href='fvids.html'">
+    Home
+  </div>
+
+  <div class="nav-item" onclick="location.href='explore.html'">
+    Explore
+  </div>
+
+  <div class="nav-item plus" onclick="handlePlusClick(event)">
+  +
+</div>
+
+  <div class="nav-item" onclick="location.href='fvidsinbox.html'">
+    Inbox
+  </div>
+
+  <div class="nav-item" onclick="location.href='fvidsme.html'">
+    Me
+  </div>
+
+</div>
+  <!-- COMMENTS BOTTOM SHEET -->
+<div id="comments-sheet" class="hidden">
+
+  <div id="comments-header">
+    <div class="drag-bar"></div>
+    <h3>Comments</h3>
+  </div>
+
+  <div id="comments-body">
+    <p id="no-comments">Be the first to comment 💬</p>
+
+    <div id="comments-loading" class="comments-loading hidden">
+  <div class="comment-spinner"></div>
+    </div>
+
+    <div id="comments-list"></div>
+  </div>
+
+  <div id="comments-input-area">
+    <input type="text" id="comment-input" placeholder="Add a comment...">
+    <button id="post-comment">Post</button>
+  </div>
+
+</div>
+<script src="fvids.js"></script>
+<script src="fvids2.js"></script>
+<script src="fvidshare.js"></script>
+<script type="module" src="tutorial.js"></script>
+</body>
+</html>
